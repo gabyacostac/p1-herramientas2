@@ -1,27 +1,78 @@
-<!DOCTYPE html>
+<!doctype html>
 
-<html>
+<html lang="es">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
-    <title>UOC Boilerplate</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"> <!-- do not remove this line! -->
+    <title>Visita Tenerife</title>
+    <meta name="description" content="Página web de la iniciativa turística Visita Tenerife">
+    <meta name="author" content="Gabriela Carolina Canosa Acosta">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon.png">
   </head>
   <body>
-    <div class="uoc-container">
-      <picture>
-        <source srcset="./assets/images/logo.png?as=webp&width=350" type="image/webp" />
-        <img src="./assets/images/logo.png?width=350" alt="Universitat Oberta de Catalunya" class="uoc-logo" />
-      </picture>
-      <h1 class="uoc-title">Hello, UOC!</h1>
-      <p>
-        This is a starter template for the Advanced HTML and CSS Tools courses
-        from the Master's Program in Multimedia Applications and the Master's
-        Program in Web App and Website Development at the Universitat Oberta de
-        Catalunya.
-      </p>
-    </div>
+    <include src="./views/header.html"></include>
+    <main>
+      <section class="hero hero__background">
+        <div class="container hero__box">
+          <h1 class="hero__titulo">Descubre la isla, <br>descúbrete</h1>
+          <i class="fa-solid fa-chevron-down fa-2xl color--white"></i>
+        </div>
+      </section> 
+      <section class="mapa container" id="mapa">
+        <h2 class="seccion__titulo mapa__grid-1">¿Dónde está Tenerife?</h2>
+        <div class="mapa__grid-2">
+          <p class="texto-resaltado">Tenerife es una de las <strong>ocho islas</strong> que conforman el <strong>archipiélago canario</strong>.</p>
+        </div>
+        <div class="mapa__grid-3">
+          <p>Forma parte de la provincia de Santa Cruz de Tenerife, que incluye las cuatro islas más occidentales, <strong>Tenerife</strong>, <strong>La Palma</strong>, <strong>La Gomera</strong> y <strong>El Hierro</strong>. Al otro lado del conjunto se encuentra la provincia de Las Palmas de Gran Canaria, formada por <strong>Gran Canaria</strong>, <strong>Lanzarote</strong>, <strong>Fuerteventura</strong> y <strong>La Graciosa</strong>.</p>
+        </div>
+        <img class="mapa__grid-4" src="assets/images/map-image.svg" alt="Mapa de Canarias" >
+      </section>
+      <section class="container" id="historia">
+        <div class="historia">
+          <h2 class="seccion__titulo historia__titulo">Algo de historia <em class="enfasis">tinerfeña</em></h2>
+          <div class="historia__foto">
+            <img class="cover" src="assets/images/historia.jpeg" alt="Foto antigua de Tenerife">
+          </div>
+          <div class="historia__grid-1">
+            <p>Antes de la conquista española, Tenerife estaba habitada por los Guanches. Este pueblo bereber procedente del norte de África se dedicaba a la ganadería y a la agricultura, conocía avanzadas técnicas de momificación y tenían sus propios dioses.</p>
+          </div>
+          <div class="historia__grid-2">
+            <p class="texto-resaltado">Hoy en día se conservan numerosos <strong>restos arqueológicos de los guanches</strong>, como herramientas, esculturas y momias en diferentes <strong>museos de la isla</strong>.</p>
+          </div>
+          <div class="historia__grid-3">
+            <p>Tras la conquista se vivió un periodo de tranquilidad hasta la invasión inglesa, que terminó con victoria de los tinerfeños y pasó a formar parte de la historia de las isla y sus símbolos, como podemos ver en el escudo de Santa Cruz de Tenerife.</p>
+          </div>
+          <div class="historia__grid-4">
+            <p>A partir de este momento la isla continuó manteninendo una relación muy estrecha con latinoamérica, que sigue manteniendo hoy en día.</p>
+          </div>
+        </div>
+        <div class="subseccion">
+          <h3 class="subseccion__titulo">Datos curiosos</h3>
+          <div class="datos-cur datos-cur__texto">
+            <div class="datos-cur__elemento datos-cur__grid-1">
+              <i class="fa-solid fa-volcano fa-3x"></i>
+              <p class=""><strong>El Teide</strong> es el volcán más alto de toda España. El pico se eleva a <strong>3.715 metros</strong> sobre el nivel del mar.</p>
+            </div>
+            <div class="datos-cur__elemento datos-cur__grid-2">
+              <i class="fa-solid fa-tree fa-3x"></i>
+              <p>En el municipio de Icod de los Vinos existe un <strong>drago</strong> que se estima que puede tener <strong>1.000 años</strong> de antigüedad.</p>
+            </div>
+            <div class="datos-cur__elemento datos-cur__grid-3">
+              <i class="fa-solid fa-snowflake fa-3x"></i>
+              <p>La isla ha sido conocida como Nivaria por los portugueses o Tinerife por los palmeros, haciendo referencia a <strong>la nieve del Teide</strong>.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <include src="./views/descubre.html"></include>
+      <div class="arriba">
+        <i class="fa-solid fa-chevron-up"></i>
+        <a class="link-style--bold" href="index.html">Volver arriba</a>
+      </div>
+    </main>
     <include src="./views/footer.html"></include>
-    <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+    <script type="module" src="./assets/scripts/main.js"></script> <!-- do not remove this line! -->
   </body>
 </html>
